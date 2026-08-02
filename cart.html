@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Корзина — TechStore</title>
+
+    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            TechStore
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="index.html" class="nav-link">
+                ← Вернуться в магазин
+            </a>
+
+
+            <a
+                href="login.html"
+                class="header-action"
+                id="profile-link"
+            >
+                <span class="header-icon">👤</span>
+                <span id="profile-text">Войти</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+    <main>
+
+        <section class="cart">
+
+            <div class="cart-heading">
+                <div>
+                    <span class="cart-heading-icon">🛒</span>
+
+                    <div>
+                        <h2>Корзина</h2>
+                        <p>Проверьте товары перед оформлением</p>
+                    </div>
+                </div>
+
+                <a href="index.html" class="continue-shopping">
+                    ← Продолжить покупки
+                </a>
+            </div>
+
+            <ul id="cart-list"></ul>
+
+            <div class="cart-footer">
+
+                <div class="cart-total">
+                    <span>Итоговая сумма</span>
+
+                    <strong>
+                        <span id="total-price">0</span> ₽
+                    </strong>
+                </div>
+
+                <div class="cart-actions">
+
+                    <button
+                        type="button"
+                        id="clear-cart"
+                        class="clear-cart-button"
+                    >
+                        Очистить корзину
+                    </button>
+
+                    <button
+                        type="button"
+                        id="checkout"
+                        class="checkout-button"
+                    >
+                        Оформить заказ
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="order-form"
+            class="order-form"
+            style="display: none;"
+        >
+
+            <div class="order-form-heading">
+                <h2>Оформление заказа</h2>
+
+                <p>
+                    Укажите контактные данные и адрес доставки
+                </p>
+            </div>
+
+            <div class="order-fields">
+
+                <label for="name">
+                    Ваше имя
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Например, Игорь"
+                >
+
+                <label for="phone">
+                    Телефон
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+7 999 123-45-67"
+                >
+
+                <label for="address">
+                    Адрес доставки
+                </label>
+
+                <input
+                    type="text"
+                    id="address"
+                    placeholder="Город, улица, дом, квартира"
+                >
+
+            </div>
+
+            <button
+                type="button"
+                id="confirm-order"
+                class="confirm-order-button"
+            >
+                Подтвердить заказ
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js?v=20"></script>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <h3>TechStore</h3>
+        <p>Учебный проект интернет-магазина</p>
+
+        <p class="footer-copy">
+            © 2026 TechStore. Все права защищены.
+        </p>
+    </div>
+</footer>
+
+</body>
+
+</html>

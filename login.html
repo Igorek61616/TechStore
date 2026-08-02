@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Вход — TechStore</title>
+
+    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+            <a href="index.html" class="auth-logo">
+                TechStore
+            </a>
+
+            <h1>Вход</h1>
+
+            <p class="auth-description">
+                Войдите в свой аккаунт
+            </p>
+
+            <form id="login-form">
+
+                <label for="login-email">
+                    Электронная почта
+                </label>
+
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="example@mail.ru"
+                    required
+                >
+
+                <label for="login-password">
+                    Пароль
+                </label>
+
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Введите пароль"
+                    required
+                >
+
+                <p class="auth-error" id="login-error"></p>
+
+                <button type="submit" class="auth-button">
+                    Войти
+                </button>
+
+            </form>
+
+            <p class="auth-switch">
+                Нет аккаунта?
+                <a href="register.html">
+                    Зарегистрироваться
+                </a>
+            </p>
+
+            <a href="index.html" class="back-home">
+                ← Вернуться на главную
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="script.js?v=20"></script>
+
+</body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h3>TechStore</h3>
+        <p>Учебный проект интернет-магазина</p>
+
+        <p class="footer-copy">
+            © 2026 TechStore. Все права защищены.
+        </p>
+    </div>
+</footer>
+
+</html>

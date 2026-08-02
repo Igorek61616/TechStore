@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Товар — TechStore</title>
+
+    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                TechStore
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Главная
+                </a>
+
+                <a href="index.html#catalog">
+                    Каталог
+                </a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <a
+                    href="login.html"
+                    class="header-action"
+                    id="profile-link"
+                >
+                    <span class="header-icon">👤</span>
+                    <span id="profile-text">Войти</span>
+                </a>
+
+                <a
+                    href="cart.html"
+                    class="header-action cart-link"
+                >
+                    <span class="header-icon">🛒</span>
+
+                    <span>Корзина</span>
+
+                    <span
+                        id="cart-count"
+                        class="cart-count"
+                    >
+                        0
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="product-page">
+
+        <a
+            href="index.html#catalog"
+            class="product-back"
+        >
+            ← Вернуться в каталог
+        </a>
+
+        <section class="product-details">
+
+            <div class="product-details-image">
+
+                <img
+                    id="product-page-image"
+                    src="favicon.png"
+                    alt="Товар"
+                >
+
+            </div>
+
+            <div class="product-details-info">
+
+                <span
+                    id="product-page-category"
+                    class="product-page-category"
+                >
+                    Товар
+                </span>
+
+                <h1 id="product-page-name">
+                    Название товара
+                </h1>
+
+                <div class="product-page-rating">
+                    ★★★★★
+                    <span>4.9 · 128 отзывов</span>
+                </div>
+
+                <p
+                    id="product-page-price"
+                    class="product-page-price"
+                >
+                    0 ₽
+                </p>
+
+                <p class="product-page-stock">
+                    В наличии:
+                    <strong id="product-page-stock">
+                        0
+                    </strong>
+                    шт.
+                </p>
+
+                <p class="product-page-description">
+                    Современная техника с официальной гарантией
+                    и быстрой доставкой.
+                </p>
+
+                <button
+                    type="button"
+                    id="product-page-cart-button"
+                    class="add-to-cart product-page-button"
+                >
+                    Добавить в корзину
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <h3>TechStore</h3>
+
+            <p>
+                Учебный проект интернет-магазина
+            </p>
+
+            <p class="footer-copy">
+                © 2026 TechStore. Все права защищены.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js?v=20"></script>
+
+</body>
+
+</html>

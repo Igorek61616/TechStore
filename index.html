@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="TechStore &mdash; &ucy;&chcy;&iecy;&bcy;&ncy;&ycy;&jcy; &icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy;-&mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy; &ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;&ocy;&vcy;, &mcy;&ocy;&ncy;&icy;&tcy;&ocy;&rcy;&ocy;&vcy; &icy; &kcy;&ocy;&mcy;&pcy;&softcy;&yucy;&tcy;&iecy;&rcy;&ncy;&ycy;&khcy; &acy;&kcy;&scy;&iecy;&scy;&scy;&ucy;&acy;&rcy;&ocy;&vcy;." name="description"/>
+  <title>
+   TechStore &mdash; &ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;&icy; &icy; &tcy;&iecy;&khcy;&ncy;&icy;&kcy;&acy;
+  </title>
+  <link href="style.css?v=20" rel="stylesheet">
+  <link href="favicon.png?v=5" rel="icon" sizes="32x32" type="image/png"/>
+ </head>
+ <body>
+  <!-- Шапка сайта -->
+  <header class="site-header">
+   <div class="header-container">
+    <a class="logo" href="index.html">
+     TechStore
+    </a>
+    <nav class="main-nav">
+     <a href="index.html">
+      &Gcy;&lcy;&acy;&vcy;&ncy;&acy;&yacy;
+     </a>
+     <a href="#catalog">
+      &Kcy;&acy;&tcy;&acy;&lcy;&ocy;&gcy;
+     </a>
+    </nav>
+    <form class="header-search" id="header-search">
+     <input id="header-search-input" placeholder="&Pcy;&ocy;&icy;&scy;&kcy; &tcy;&ocy;&vcy;&acy;&rcy;&ocy;&vcy;" type="text"/>
+     <button type="submit">
+      &Ncy;&acy;&jcy;&tcy;&icy;
+     </button>
+    </form>
+    <div class="header-actions">
+     <a class="header-action" href="login.html" id="profile-link">
+      <span class="header-icon">
+       👤
+      </span>
+      <span id="profile-text">
+       &Vcy;&ocy;&jcy;&tcy;&icy;
+      </span>
+     </a>
+     <a class="header-action cart-link" href="cart.html">
+      <span class="header-icon">
+       🛒
+      </span>
+      <span>
+       &Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;
+      </span>
+      <span class="cart-count" id="cart-count">
+       0
+      </span>
+     </a>
+    </div>
+   </div>
+  </header>
+  <main>
+   <!-- Главный баннер -->
+   <section class="hero">
+    <div class="hero-content">
+     <div class="hero-text">
+      <h2>
+       &Ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;&icy; &ncy;&ocy;&vcy;&ocy;&gcy;&ocy; &pcy;&ocy;&kcy;&ocy;&lcy;&iecy;&ncy;&icy;&yacy;
+      </h2>
+      <p>
+       &Icy;&gcy;&rcy;&ocy;&vcy;&ycy;&iecy; &icy; &pcy;&rcy;&ocy;&fcy;&iecy;&scy;&scy;&icy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ycy;&iecy; &ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;&icy;
+                &pcy;&ocy; &vcy;&ycy;&gcy;&ocy;&dcy;&ncy;&ycy;&mcy; &tscy;&iecy;&ncy;&acy;&mcy;.
+      </p>
+      <a class="hero-button" href="#catalog">
+       &Scy;&mcy;&ocy;&tcy;&rcy;&iecy;&tcy;&softcy; &kcy;&acy;&tcy;&acy;&lcy;&ocy;&gcy;
+      </a>
+     </div>
+     <div class="hero-image">
+      <img alt="&Icy;&gcy;&rcy;&ocy;&vcy;&ocy;&jcy; &ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;" loading="eager" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/&Ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy; 1.png"/>
+     </div>
+    </div>
+   </section>
+   <!-- Категории товаров -->
+   <section class="categories">
+    <div class="category" data-category="laptops">
+     💻
+     <span>
+      &Ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;&icy;
+     </span>
+    </div>
+    <div class="category" data-category="monitors">
+     🖥️
+     <span>
+      &Mcy;&ocy;&ncy;&icy;&tcy;&ocy;&rcy;&ycy;
+     </span>
+    </div>
+    <div class="category" data-category="games">
+     🎮
+     <span>
+      &Icy;&gcy;&rcy;&ycy;
+     </span>
+    </div>
+    <div class="category" data-category="keyboards">
+     ⌨
+     <span>
+      &Kcy;&lcy;&acy;&vcy;&icy;&acy;&tcy;&ucy;&rcy;&ycy;
+     </span>
+    </div>
+    <div class="category" data-category="mice">
+     🖱️
+     <span>
+      &Mcy;&ycy;&shcy;&icy;
+     </span>
+    </div>
+    <div class="category" data-category="headphones">
+     🎧
+     <span>
+      &Ncy;&acy;&ucy;&shcy;&ncy;&icy;&kcy;&icy;
+     </span>
+    </div>
+   </section>
+   <!-- Сортировка и фильтры -->
+   <section class="catalog-controls">
+    <div class="catalog-control">
+     <label for="sort-products">
+      &Scy;&ocy;&rcy;&tcy;&icy;&rcy;&ocy;&vcy;&kcy;&acy;
+     </label>
+     <select id="sort-products">
+      <option value="default">
+       &Pcy;&ocy; &ucy;&mcy;&ocy;&lcy;&chcy;&acy;&ncy;&icy;&yucy;
+      </option>
+      <option value="price-asc">
+       &Scy;&ncy;&acy;&chcy;&acy;&lcy;&acy; &dcy;&iecy;&shcy;&iecy;&vcy;&lcy;&iecy;
+      </option>
+      <option value="price-desc">
+       &Scy;&ncy;&acy;&chcy;&acy;&lcy;&acy; &dcy;&ocy;&rcy;&ocy;&zhcy;&iecy;
+      </option>
+      <option value="name-asc">
+       &Pcy;&ocy; &ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&yucy;
+      </option>
+     </select>
+    </div>
+    <label class="stock-filter">
+     <input id="only-in-stock" type="checkbox"/>
+     <span>
+      &Tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+     </span>
+    </label>
+   </section>
+   <!-- Каталог товаров -->
+   <section class="products" id="catalog">
+    <div class="card" data-category="laptops" data-id="asus-tuf" data-stock="4">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <span class="product-badge badge-hit">
+      🔥 &KHcy;&icy;&tcy;
+     </span>
+     <div class="product-image">
+      <img alt="ASUS TUF Gaming" class="img-asus-tuf" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/asus-tuf.png"/>
+     </div>
+     <h3>
+      ASUS TUF Gaming
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 79 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       4
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="lenovo-legion" data-stock="2">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Lenovo Legion" class="img-lenovo-legion" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/lenovo-legion.png"/>
+     </div>
+     <h3>
+      Lenovo Legion
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 114 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       2
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="macbook-air-m4" data-stock="8">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <span class="product-badge badge-new">
+      🔥 &Ncy;&ocy;&vcy;&icy;&ncy;&kcy;&acy;
+     </span>
+     <div class="product-image">
+      <img alt="MacBook Air M4" class="img-macbook-air" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/macbook-air.png"/>
+     </div>
+     <h3>
+      MacBook Air M4
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 129 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       8
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="acer-nitro-v15" data-stock="6">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <span class="product-badge badge-sale">
+      &Scy;&kcy;&icy;&dcy;&kcy;&acy; 15%
+     </span>
+     <div class="product-image">
+      <img alt="Acer Nitro V 15" class="img-acer-nitro" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/acer-nitro-v15.png"/>
+     </div>
+     <h3>
+      Acer Nitro V 15
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 82 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       6
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="msi-katana-17" data-stock="3">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="MSI Katana 17" class="img-msi-katana" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/msi-katana-17.png"/>
+     </div>
+     <h3>
+      MSI Katana 17
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 109 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       3
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="hp-victus-16" data-stock="5">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="HP Victus 16" class="img-hp-victus" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/hp-victus-16.png"/>
+     </div>
+     <h3>
+      HP Victus 16
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 94 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       5
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="asus-vivobook-15" data-stock="9">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="ASUS VivoBook 15" class="img-asus-vivobook" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/asus-vivobook-15.png"/>
+     </div>
+     <h3>
+      ASUS VivoBook 15
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 59 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       9
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="lenovo-ideapad-slim-3" data-stock="7">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Lenovo IdeaPad Slim 3" class="img-lenovo-ideapad" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/lenovo-ideapad-slim-3.png"/>
+     </div>
+     <h3>
+      Lenovo IdeaPad Slim 3
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 54 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       7
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="laptops" data-id="huawei-matebook-d16" data-stock="4">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Huawei MateBook D16" class="img-huawei-matebook" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/huawei-matebook-d16.png"/>
+     </div>
+     <h3>
+      Huawei MateBook D16
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 69 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       4
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="monitors" data-id="lg-ultragear-27" data-stock="5">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <span class="product-badge badge-hit">
+      🔥 &KHcy;&icy;&tcy;
+     </span>
+     <div class="product-image">
+      <img alt="LG UltraGear 27" class="img-lg-ultragear" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/lg-ultragear-27.png"/>
+     </div>
+     <h3>
+      LG UltraGear 27
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 34 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       5
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="monitors" data-id="samsung-odyssey-g5" data-stock="4">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Samsung Odyssey G5" class="img-samsung-odyssey" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/samsung-odyssey-g5.png"/>
+     </div>
+     <h3>
+      Samsung Odyssey G5
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 39 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       4
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="monitors" data-id="asus-tuf-vg27aq" data-stock="7">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="ASUS TUF VG27AQ" class="img-asus-monitor" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/asus-tuf-vg27aq.png"/>
+     </div>
+     <h3>
+      ASUS TUF VG27AQ
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 42 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       7
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="keyboards" data-id="redragon-k552" data-stock="6">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Redragon Kumara K552" class="img-redragon-k552" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/redragon-k552.png"/>
+     </div>
+     <h3>
+      Redragon Kumara K552
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 4 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       6
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="keyboards" data-id="hyperx-alloy-origins" data-stock="4">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="HyperX Alloy Origins" class="img-hyperx-keyboard" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/hyperx-alloy-origins.png"/>
+     </div>
+     <h3>
+      HyperX Alloy Origins
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 9 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       4
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="keyboards" data-id="logitech-g-pro-x-tkl" data-stock="5">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Logitech G PRO X TKL" class="img-logitech-keyboard" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/logitech-g-pro-x-tkl.png"/>
+     </div>
+     <h3>
+      Logitech G PRO X TKL
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 16 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       5
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="mice" data-id="logitech-g-pro-x-superlight" data-stock="5">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Logitech G Pro X Superlight" class="img-logitech-mouse" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/logitech-g-pro-x-superlight.png"/>
+     </div>
+     <h3>
+      Logitech G Pro X Superlight
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 12 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       5
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="mice" data-id="razer-deathadder-v3" data-stock="7">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Razer DeathAdder V3" class="img-razer-mouse" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/razer-deathadder-v3.png"/>
+     </div>
+     <h3>
+      Razer DeathAdder V3
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 8 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       7
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="mice" data-id="steelseries-rival-3" data-stock="8">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="SteelSeries Rival 3" class="img-steelseries-mouse" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/steelseries-rival-3.png"/>
+     </div>
+     <h3>
+      SteelSeries Rival 3
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 4 490 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       8
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="headphones" data-id="hyperx-cloud-iii" data-stock="6">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="HyperX Cloud III" class="img-hyperx-headphones" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/hyperx-cloud-iii.png"/>
+     </div>
+     <h3>
+      HyperX Cloud III
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 10 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       6
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="headphones" data-id="logitech-g435" data-stock="5">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Logitech G435" class="img-logitech-headphones" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/logitech-g435.png"/>
+     </div>
+     <h3>
+      Logitech G435
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 6 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&star;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       5
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+    <div class="card" data-category="headphones" data-id="razer-blackshark-v2" data-stock="4">
+     <button
+    class="favorite-button"
+    type="button"
+    aria-label="Добавить в избранное"
+>
+    🤍
+</button>
+        <div class="product-image">
+      <img alt="Razer BlackShark V2" class="img-razer-headphones" loading="lazy" src="&Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;/razer-blackshark-v2.png"/>
+     </div>
+     <h3>
+      Razer BlackShark V2
+     </h3>
+     <p class="product-price">
+      &TScy;&iecy;&ncy;&acy;: 11 990 ₽
+     </p>
+     <p>
+      &starf;&starf;&starf;&starf;&starf;
+     </p>
+     <p>
+      &Ocy;&scy;&tcy;&acy;&lcy;&ocy;&scy;&softcy;:
+      <span class="stock-count">
+       4
+      </span>
+      &shcy;&tcy;.
+     </p>
+     <button class="add-to-cart">
+      &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+     </button>
+    </div>
+   </section>
+  </main>
+
+  <section class="advantages">
+
+    <div class="advantages-title">
+
+        <h2>Почему выбирают TechStore</h2>
+
+        <p>
+            Мы предлагаем только проверенную технику,
+            официальную гарантию и быструю доставку.
+        </p>
+
+    </div>
+
+    <div class="advantages-grid">
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">🚚</div>
+
+            <h3>Быстрая доставка</h3>
+
+            <p>
+                Отправляем заказы по всей России
+                в течение 1–3 дней.
+            </p>
+
+        </div>
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">🛡️</div>
+
+            <h3>Гарантия качества</h3>
+
+            <p>
+                Только официальная техника
+                с гарантией производителя.
+            </p>
+
+        </div>
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">💳</div>
+
+            <h3>Удобная оплата</h3>
+
+            <p>
+                Банковская карта,
+                СБП или при получении.
+            </p>
+
+        </div>
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">🎧</div>
+
+            <h3>Поддержка 24/7</h3>
+
+            <p>
+                Наши специалисты всегда
+                помогут выбрать технику.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="reviews">
+
+    <div class="reviews-title">
+        <h2>Отзывы покупателей</h2>
+
+        <p>
+            Что говорят пользователи о покупках в TechStore.
+        </p>
+    </div>
+
+    <div class="reviews-grid">
+
+        <article class="review-card">
+
+            <div class="review-rating">
+                ★★★★★
+            </div>
+
+            <p class="review-text">
+                Ноутбук пришёл за два дня.
+                Всё отлично упаковано, работает без проблем.
+            </p>
+
+            <div class="review-author">
+                <div class="review-avatar">И</div>
+
+                <div>
+                    <strong>Иван</strong>
+                    <span>Краснодар</span>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="review-card">
+
+            <div class="review-rating">
+                ★★★★★
+            </div>
+
+            <p class="review-text">
+                Удобный сайт, быстро нашла нужную клавиатуру.
+                Заказ оформили без лишних вопросов.
+            </p>
+
+            <div class="review-author">
+                <div class="review-avatar">М</div>
+
+                <div>
+                    <strong>Мария</strong>
+                    <span>Москва</span>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="review-card">
+
+            <div class="review-rating">
+                ★★★★★
+            </div>
+
+            <p class="review-text">
+                Хорошие цены и понятная корзина.
+                Обязательно буду заказывать ещё.
+            </p>
+
+            <div class="review-author">
+                <div class="review-avatar">А</div>
+
+                <div>
+                    <strong>Александр</strong>
+                    <span>Ростов-на-Дону</span>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="brands">
+
+    <div class="brands-title">
+        <h2>Популярные бренды</h2>
+
+        <p>
+            Техника ведущих производителей
+            в одном каталоге.
+        </p>
+    </div>
+
+    <div class="brands-grid">
+
+        <div class="brand-card">ASUS</div>
+        <div class="brand-card">Lenovo</div>
+        <div class="brand-card">Apple</div>
+        <div class="brand-card">MSI</div>
+        <div class="brand-card">HP</div>
+        <div class="brand-card">Huawei</div>
+        <div class="brand-card">Samsung</div>
+        <div class="brand-card">LG</div>
+        <div class="brand-card">Logitech</div>
+        <div class="brand-card">HyperX</div>
+        <div class="brand-card">Razer</div>
+        <div class="brand-card">SteelSeries</div>
+
+    </div>
+
+</section>
+
+  <!-- Подвал сайта -->
+  <footer class="footer">
+   <div class="footer-grid">
+    <div class="footer-column footer-brand">
+     <a class="footer-logo" href="index.html">
+      TechStore
+     </a>
+     <p>
+      &Scy;&ocy;&vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&ncy;&acy;&yacy; &tcy;&iecy;&khcy;&ncy;&icy;&kcy;&acy; &dcy;&lcy;&yacy; &rcy;&acy;&bcy;&ocy;&tcy;&ycy;,
+                &icy;&gcy;&rcy; &icy; &pcy;&ocy;&vcy;&scy;&iecy;&dcy;&ncy;&iecy;&vcy;&ncy;&ycy;&khcy; &zcy;&acy;&dcy;&acy;&chcy;.
+     </p>
+     <span class="footer-project">
+      &Ucy;&chcy;&iecy;&bcy;&ncy;&ycy;&jcy; &pcy;&rcy;&ocy;&iecy;&kcy;&tcy; &icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy;-&mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&acy;
+     </span>
+    </div>
+    <div class="footer-column">
+     <h3>
+      &Kcy;&acy;&tcy;&acy;&lcy;&ocy;&gcy;
+     </h3>
+     <a href="index.html#catalog">
+      &Ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;&icy;
+     </a>
+     <a href="index.html#catalog">
+      &Mcy;&ocy;&ncy;&icy;&tcy;&ocy;&rcy;&ycy;
+     </a>
+     <a href="index.html#catalog">
+      &Kcy;&lcy;&acy;&vcy;&icy;&acy;&tcy;&ucy;&rcy;&ycy;
+     </a>
+     <a href="index.html#catalog">
+      &Mcy;&ycy;&shcy;&icy;
+     </a>
+     <a href="index.html#catalog">
+      &Ncy;&acy;&ucy;&shcy;&ncy;&icy;&kcy;&icy;
+     </a>
+    </div>
+    <div class="footer-column">
+     <h3>
+      &Pcy;&ocy;&kcy;&ucy;&pcy;&acy;&tcy;&iecy;&lcy;&yacy;&mcy;
+     </h3>
+     <a href="#">
+      &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy; &icy; &ocy;&pcy;&lcy;&acy;&tcy;&acy;
+     </a>
+     <a href="#">
+      &Gcy;&acy;&rcy;&acy;&ncy;&tcy;&icy;&yacy;
+     </a>
+     <a href="#">
+      &Vcy;&ocy;&zcy;&vcy;&rcy;&acy;&tcy; &tcy;&ocy;&vcy;&acy;&rcy;&acy;
+     </a>
+     <a href="#">
+      &Vcy;&ocy;&pcy;&rcy;&ocy;&scy;&ycy; &icy; &ocy;&tcy;&vcy;&iecy;&tcy;&ycy;
+     </a>
+     <a href="profile.html">
+      &Lcy;&icy;&chcy;&ncy;&ycy;&jcy; &kcy;&acy;&bcy;&icy;&ncy;&iecy;&tcy;
+     </a>
+    </div>
+    <div class="footer-column footer-contacts">
+     <h3>
+      &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+     </h3>
+     <a href="tel:+78001234567">
+      &phone; 8 (800) 123-45-67
+     </a>
+     <a href="mailto:support@techstore.ru">
+      ✉ support@techstore.ru
+     </a>
+     <p>
+      &Pcy;&ncy;&ndash;&Vcy;&scy;: 9:00&ndash;21:00
+     </p>
+     <div class="footer-socials">
+      <a aria-label="&Vcy;&Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&iecy;" href="#">
+       VK
+      </a>
+      <a aria-label="Telegram" href="#">
+       TG
+      </a>
+      <a aria-label="YouTube" href="#">
+       YT
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <span>
+     &copy; 2026 TechStore. &Vcy;&scy;&iecy; &pcy;&rcy;&acy;&vcy;&acy; &zcy;&acy;&shchcy;&icy;&shchcy;&iecy;&ncy;&ycy;.
+    </span>
+    <span>
+     &Scy;&dcy;&iecy;&lcy;&acy;&ncy;&ocy; &dcy;&lcy;&yacy; &pcy;&ocy;&rcy;&tcy;&fcy;&ocy;&lcy;&icy;&ocy;
+    </span>
+   </div>
+  </footer>
+  <div class="toast-container" id="toast-container">
+  </div>
+  <script src="script.js?v=20"></script>
+ </body>
+</html>
